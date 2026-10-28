@@ -369,6 +369,8 @@ footer{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);padding-bot
       <div class="tool">MCP<small>estudo · agentes e multi-agentes</small></div>
       <div class="tool">n8n<small>estudo · workflows e APIs com IA</small></div>
       <div class="tool">Claude Code<small>agente no terminal e na IDE</small></div>
+      <div class="tool">Vibe coding<small>Lovable · prototipagem com IA</small></div>
+      <div class="tool">Prompt engineering<small>molde de prompts para código</small></div>
     </div>
   </div>
 
@@ -383,6 +385,45 @@ footer{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);padding-bot
     <div class="step"><small>estudo · workflows</small><b>n8n com IA</b><p>Orquestrar APIs e LLMs em fluxos automáticos, com humano aprovando os passos críticos.</p></div>
   </div>
   <p class="note">Regra de ouro: o agente tem autonomia para tentar, eu tenho a palavra final. Todo diff passa por revisão e testes antes do commit.</p>
+
+  <h3 id="portfolio-ia" style="margin-top:44px;font-size:1.5rem">Meu portfólio de IA, em quatro frentes</h3>
+  <p class="lead">Do prompt ao sistema em uso: o que já fiz com IA e onde cada coisa está.</p>
+  <div class="projects">
+    <article class="proj">
+      <div class="top"><h3>Prompts e experimentação com LLMs</h3><span class="chip ai">frente 1</span></div>
+      <p>Curso com mais de 170 prompts de ChatGPT, orquestração de agentes com Claude, OpenAI e Copilot, e estudo de MCP. Abaixo, o molde que uso para estruturar prompts de desenvolvimento.</p>
+      <div class="stack"><span>ChatGPT</span><span>Claude</span><span>OpenAI</span><span>Prompt engineering</span></div>
+    </article>
+    <article class="proj">
+      <div class="top"><h3>Automações e workflows</h3><span class="chip ai">frente 2</span></div>
+      <p>Formação em n8n (workflows, APIs e IA) e estudo de agentes com MCP. Meu instinto vem do DP: dez anos automatizando rotinas de planilha antes de automatizar com código e IA.</p>
+      <div class="stack"><span>n8n</span><span>MCP</span><span>APIs</span><span>Python</span></div>
+    </article>
+    <article class="proj">
+      <div class="top"><h3>Ferramentas internas e agentes</h3><span class="chip ai">frente 3</span></div>
+      <p>Tideflow, sistema interno de gestão e métricas de projetos que substitui lançamentos em planilha, e os projetos Full Stack do CESAR para clientes internos, desenvolvidos com agentes de IA no processo.</p>
+      <div class="stack"><span>Tideflow</span><span>CESAR</span><span>Claude Code</span><span>TypeScript</span></div>
+    </article>
+    <article class="proj">
+      <div class="top"><h3>Sistemas em produção</h3><span class="chip ai">frente 4</span></div>
+      <p>APIs de Fundos de Investimento no Itaú Unibanco: construção, modernização e tratamento de incidentes em sistemas financeiros de alta criticidade, usados por outras equipes.</p>
+      <div class="stack"><span>APIs REST</span><span>Monitoramento</span><span>Incidentes</span><span>Itaú</span></div>
+    </article>
+  </div>
+
+  <h3 style="margin-top:36px;font-size:1.5rem">Como estruturo um prompt de desenvolvimento</h3>
+  <p class="lead">Exemplo do molde que uso com agentes: papel, contexto, tarefa, restrições e critério de aceite, para o resultado ser revisável.</p>
+  <div class="prompt" style="margin-top:20px">
+    <div class="u">// prompt-template.md</div>
+    <div><span class="k">papel</span>: dev Full Stack sênior, revisor rigoroso de código</div>
+    <div><span class="k">contexto</span>: app Next.js + API Express; regra de negócio colada abaixo</div>
+    <div><span class="k">tarefa</span>: criar o endpoint de cadastro com validação e testes</div>
+    <div><span class="k">restrições</span>: seguir o padrão em camadas do projeto; sem novas dependências</div>
+    <div><span class="k">saída</span>: diff pequeno + explicação das decisões + como testar</div>
+    <div><span class="k">aceite</span>: testes passando e nenhum dado sensível em log</div>
+    <div style="margin-top:8px"><span class="ok">✓ depois: eu leio o diff, questiono e só então faço o commit</span></div>
+  </div>
+  <p class="note">Resultados mensuráveis dos projetos de IA aparecem com mais detalhe na conversa. Posso mostrar o código dos repositórios privados.</p>
 
   <h3 style="margin-top:44px;font-size:1.5rem">Meu foco: construir com IA</h3>
   <div class="flow" style="grid-template-columns:repeat(3,1fr)">
@@ -476,7 +517,7 @@ const PROJ=[
  {n:"Projetos Full Stack no CESAR",c:"pro",tag:"atual",f:true,d:"Aplicações para clientes internos e externos, do front ao banco de dados, desenvolvidas com fluxo AI-first: agentes de IA na especificação, no código, nos testes e na documentação. Deploy em ambientes com Rancher.",s:["React","Next.js","Node","Express","Python","SQL","Agentes de IA","GitLab"]},
  {n:"APIs de Fundos de Investimento",c:"pro",tag:"Itaú",d:"Desenvolvimento e modernização de APIs REST, refatoração de legado, monitoramento e resolução de incidentes em sistemas financeiros críticos.",s:["APIs REST","Monitoramento","Incidentes","Scrum"]},
  {n:"TaskInsight",c:"ia",tag:"squad",d:"Plataforma de tarefas em squad, com CRUD em Node e JWT e um serviço em FastAPI que aplica machine learning (scikit-learn) sobre as tarefas. Arquitetura em camadas e dois serviços integrados.",s:["Node","FastAPI","MongoDB","JWT","scikit-learn"]},
- {n:"Desafio 7 Dias Lovable",c:"web",repo:"Desafio_7_Dias_Lovable",d:"App de controle financeiro corporativo com identidade brasileira, seguindo padrões de nível enterprise: Clean Architecture e Feature-Driven.",s:["TypeScript","Clean Architecture","Feature-Driven"]},
+ {n:"Desafio 7 Dias Lovable",c:"web",repo:"Desafio_7_Dias_Lovable",d:"App de controle financeiro corporativo com identidade brasileira, seguindo padrões de nível enterprise: Clean Architecture e Feature-Driven.",s:["TypeScript","Clean Architecture","Feature-Driven","Vibe coding"]},
  {n:"FinPulseIQ",c:"web",repo:"FinPulseIQ",d:"Acompanha o “batimento cardíaco” da saúde financeira do usuário em tempo real.",s:["TypeScript","Finanças","Tempo real"]},
  {n:"PDI+",c:"web",repo:"PDI_MAIS",d:"PWA que transforma o acompanhamento passivo de Planos de Desenvolvimento Individual em uma jornada.",s:["TypeScript","PWA"]},
  {n:"Tideflow",c:"pro",priv:true,d:"Sistema de gestão e métricas de projetos, evolução da plataforma Protrack. Substitui lançamentos feitos em planilha por um fluxo mais seguro e controlado.",s:["TypeScript","Métricas","Gestão de projetos"]},
