@@ -245,6 +245,7 @@ footer{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);padding-bot
   <ul>
     <li><a href="#transicao">Trajetória</a></li>
     <li><a href="#ia">IA</a></li>
+    <li><a href="#serie">Série</a></li>
     <li><a href="#projetos">Projetos</a></li>
     <li><a href="#formacao">Formação</a></li>
     <li><a href="#cursos">Cursos</a></li>
@@ -262,6 +263,7 @@ footer{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);padding-bot
       <span class="badge">Full Stack · AI Development</span>
       <span class="badge">Agentes: Claude Code · Copilot · MCP · n8n</span>
       <span class="badge">Top 200 de 24 mil · K2 / Itaú / Accenture / Amazon</span>
+      <span class="badge">Autor da Série Conecta · 12 episódios sobre IA</span>
       <span class="badge">Pós em Engenharia de Software e IA</span>
       <span class="badge">Recife · PE</span>
     </div>
@@ -443,6 +445,39 @@ footer{font-family:var(--f-mono);font-size:.78rem;color:var(--muted);padding-bot
   </div>
 </section>
 
+<section id="serie">
+  <div class="eyebrow"><b>série</b> · conecta · conteúdo e educação</div>
+  <h2>Série Conecta: IA do Enter ao impacto ambiental</h2>
+  <p class="lead">Escrevi um ebook em formato de série, com 12 episódios, para a minha empresa. Ele explica o uso de IA desde o que acontece quando se aperta Enter até o impacto ambiental, passando por técnicas de economia de tokens e boas práticas. A pesquisa combinou artigos científicos (encontrados com o Perplexity), cursos e documentação.</p>
+  <div class="badges">
+    <span class="chip ai">12 episódios</span>
+    <span class="badge">Como a IA processa um prompt</span>
+    <span class="badge">Engenharia de prompt</span>
+    <span class="badge">Economia de tokens</span>
+    <span class="badge">Boas práticas</span>
+    <span class="badge">Custo computacional</span>
+    <span class="badge">Impacto ambiental</span>
+  </div>
+
+  <h3 style="margin-top:36px;font-size:1.5rem">Episódio 01 · As engrenagens da “mente” sempre ativa</h3>
+  <p class="lead">A IA não pensa nem tem consciência: ela prevê o próximo token. O episódio acompanha o caminho do prompt, passo a passo.</p>
+  <div class="flow" style="grid-template-columns:repeat(3,1fr)">
+    <div class="step"><small>passo 1</small><b>Tokenização</b><p>O texto vira tokens, que podem ser palavras inteiras ou pedaços. Cada token ganha um ID (o vocabulário cl100k, do GPT-4, tem cerca de 100 mil).</p></div>
+    <div class="step"><small>passo 2</small><b>Embeddings</b><p>Cada token vira um vetor. Palavras de sentido próximo ficam perto no espaço: “gato” perto de “cachorro”, longe de “geladeira”.</p></div>
+    <div class="step"><small>passo 3</small><b>Atenção</b><p>Vetores Query, Key e Value pesam o contexto e o softmax gera probabilidades. É assim que “banco” perto de “praça” vira assento.</p></div>
+    <div class="step"><small>passo 4</small><b>Feedforward e camadas</b><p>O vetor expande (768 → 3.072), passa por ativação e comprime de volta. Atenção e feedforward se repetem dezenas de vezes.</p></div>
+    <div class="step"><small>passo 5</small><b>Geração e KV cache</b><p>A resposta sai um token por vez, e o KV cache na VRAM evita recalcular o que já foi processado.</p></div>
+    <div class="step"><small>passo 6</small><b>Custo real</b><p>Cada token consome GPU, memória, energia e refrigeração. Entender isso leva a usar a IA com mais consciência.</p></div>
+  </div>
+  <p class="note">Próximo: <b>Episódio 02 · A arte do prompt perfeito</b>.</p>
+
+  <h3 style="margin-top:36px;font-size:1.5rem">Por que isso muda o meu código</h3>
+  <p class="lead">Saber como o modelo funciona melhora o jeito de trabalhar com agentes: prompts mais objetivos, contexto enxuto, menos tokens gastos e menos retrabalho. É a base do meu fluxo AI-first.</p>
+
+  <h3 style="margin-top:36px;font-size:1.5rem">Em andamento: ferramentas alternativas</h3>
+  <p class="lead">Estou criando ferramentas alternativas às já existentes na empresa, usando IA e o fluxo de desenvolvimento com agentes.</p>
+</section>
+
 <section id="projetos">
   <div class="eyebrow"><b>ls</b> ./projetos</div>
   <h2>Projetos</h2>
@@ -516,6 +551,7 @@ const TRANS=[
 const PROJ=[
  {n:"Projetos Full Stack no CESAR",c:"pro",tag:"atual",f:true,d:"Aplicações para clientes internos e externos, do front ao banco de dados, desenvolvidas com fluxo AI-first: agentes de IA na especificação, no código, nos testes e na documentação. Deploy em ambientes com Rancher.",s:["React","Next.js","Node","Express","Python","SQL","Agentes de IA","GitLab"]},
  {n:"APIs de Fundos de Investimento",c:"pro",tag:"Itaú",d:"Desenvolvimento e modernização de APIs REST, refatoração de legado, monitoramento e resolução de incidentes em sistemas financeiros críticos.",s:["APIs REST","Monitoramento","Incidentes","Scrum"]},
+ {n:"Série Conecta",c:"ia",tag:"ebook · 12 episódios",d:"Série de ebooks para a empresa sobre uso de IA: do que acontece ao apertar Enter ao impacto ambiental, com técnicas de economia de tokens e boas práticas.",s:["IA generativa","Tokens","Prompt","Boas práticas"]},
  {n:"TaskInsight",c:"ia",tag:"squad",d:"Plataforma de tarefas em squad, com CRUD em Node e JWT e um serviço em FastAPI que aplica machine learning (scikit-learn) sobre as tarefas. Arquitetura em camadas e dois serviços integrados.",s:["Node","FastAPI","MongoDB","JWT","scikit-learn"]},
  {n:"Desafio 7 Dias Lovable",c:"web",repo:"Desafio_7_Dias_Lovable",d:"App de controle financeiro corporativo com identidade brasileira, seguindo padrões de nível enterprise: Clean Architecture e Feature-Driven.",s:["TypeScript","Clean Architecture","Feature-Driven","Vibe coding"]},
  {n:"FinPulseIQ",c:"web",repo:"FinPulseIQ",d:"Acompanha o “batimento cardíaco” da saúde financeira do usuário em tempo real.",s:["TypeScript","Finanças","Tempo real"]},
